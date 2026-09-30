@@ -11,11 +11,11 @@ import { TricolourAccent } from "@/components/government/tricolour";
 
 export function CategoryPage({ id }: { id: string }) {
   const { data, isLoading, error, refetch } = useQuery({ queryKey: ["rec-cat", id], queryFn: () => getRecognitionCategory(id), retry: false });
-  if (isLoading) return <div className="mx-auto max-w-5xl px-4 py-8"><LoadingBlock /></div>;
-  if (error || !data) return <div className="mx-auto max-w-5xl px-4 py-8"><ErrorState title="Category not found" body={errorMessage(error)} onRetry={() => refetch()} /></div>;
+  if (isLoading) return <div className="mx-auto max-w-5xl"><LoadingBlock /></div>;
+  if (error || !data) return <div className="mx-auto max-w-5xl"><ErrorState title="Category not found" body={errorMessage(error)} onRetry={() => refetch()} /></div>;
   const { category, entries } = data;
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 md:px-0">
+    <div className="mx-auto max-w-5xl">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted"><Link className="hover:underline" href="/recognition">Recognition</Link> <span aria-hidden="true">/</span> {category.name}</nav>
       <header className="relative overflow-hidden rounded-[2rem] bg-[#0b1b3a] p-8 text-white sm:p-12">
         <div className="jaali absolute inset-0 opacity-25" aria-hidden="true" />
