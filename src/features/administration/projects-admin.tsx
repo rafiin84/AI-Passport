@@ -29,7 +29,7 @@ export function ProjectsAdmin() {
   return (
     <div className="space-y-6">
       <PageHeader eyebrow="Projects" title="Project review" sub="Verify that the project is real, works and matches its claims." />
-      <div className="grid gap-6 xl:grid-cols-[1fr_24rem]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <AdminTable columns={cols} rows={data} caption="Projects" searchText={(p) => `${p.title} ${p.learnerName}`} onRowClick={(r) => setSel(r.id)} selectedId={sel} />
         <div className="xl:sticky xl:top-20 xl:self-start">
           {cur ? (

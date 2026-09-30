@@ -36,7 +36,7 @@ export function RegisterFlow() {
   if (step === "profile") return <ProfileSetup />;
 
   return (
-    <div className="mx-auto grid min-h-[80dvh] max-w-5xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div className="mx-auto grid min-h-[80dvh] max-w-5xl grid-cols-[minmax(0,1fr)] gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
       <aside className="hidden rounded-[2rem] bg-[#0b1b3a] p-8 text-white lg:block">
         <ChakraMotif size={44} className="text-[#a9b4ff]" />
         <h2 className="mt-6 font-display text-3xl font-extrabold leading-tight">Your AI journey starts with one quick step.</h2>

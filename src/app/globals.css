@@ -149,3 +149,6 @@ h1, h2, h3, .font-display { font-family: var(--font-display), var(--font-body), 
   .no-print { display: none !important; }
   body { background: #fff; }
 }
+
+/* Responsive safety: grid children may shrink below their content width, so wide content never stretches a page. */
+:where(.grid) > * { min-width: 0; }

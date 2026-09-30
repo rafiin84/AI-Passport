@@ -33,7 +33,7 @@ export function EvidenceReview() {
   return (
     <div className="space-y-6">
       <PageHeader eyebrow="Evidence" title="Evidence review" sub="Check practical evidence against the rubric. Approving issues the learner's credential." />
-      <div className="grid gap-6 xl:grid-cols-[1fr_24rem]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <AdminTable columns={cols} rows={data} caption="Evidence submissions" searchText={(e) => `${e.learnerName} ${e.courseTitle}`} onRowClick={(r) => setSel(r.id)} selectedId={sel} />
         <div className="xl:sticky xl:top-20 xl:self-start">
           {cur ? (
