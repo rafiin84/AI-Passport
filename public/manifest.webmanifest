@@ -1,0 +1,12 @@
+{
+  "name": "AI Passport",
+  "short_name": "AI Passport",
+  "description": "AI skills badhao. India ko aage badhao.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#FAF8F4",
+  "theme_color": "#0B1B3A",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

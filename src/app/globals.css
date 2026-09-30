@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --surface-2: #f3efe8;
+  --surface-3: #ebe6dc;
+  --fg: #0b1b3a;
+  --muted: #4b5877;
+  --border: #e2dccf;
+  --brand: #1a2b8f;
+  --brand-fg: #ffffff;
+  --brand-soft: #e8ebfb;
+  --saffron: #ff9933;
+  --saffron-deep: #96470a;
+  --saffron-soft: #fff0dc;
+  --india-green: #0f6f06;
+  --green-soft: #e4f4e1;
+  --chakra: #06038d;
+  --ring: #1a2b8f;
+  --danger: #b3261e;
+  --danger-soft: #fdecea;
+  --danger-fg: #ffffff;
+  --shadow: 0 1px 2px rgb(11 27 58 / 0.05), 0 8px 24px -8px rgb(11 27 58 / 0.12);
+  --shadow-lg: 0 2px 4px rgb(11 27 58 / 0.05), 0 24px 48px -16px rgb(11 27 58 / 0.22);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #080e1d;
+  --surface: #101a31;
+  --surface-2: #16223f;
+  --surface-3: #1e2c50;
+  --fg: #eef1f8;
+  --muted: #a3afca;
+  --border: #25345a;
+  --brand: #8ea2ff;
+  --brand-fg: #08102b;
+  --brand-soft: #1a2650;
+  --saffron: #ffa64d;
+  --saffron-deep: #ffb870;
+  --saffron-soft: #33230f;
+  --india-green: #4cc43f;
+  --green-soft: #12301a;
+  --chakra: #a9b4ff;
+  --ring: #a9b8ff;
+  --danger: #ff8a80;
+  --danger-soft: #3a1512;
+  --danger-fg: #2a0703;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -8px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 24px 48px -16px rgb(0 0 0 / 0.7);
+}
+
+:root[data-contrast="high"] {
+  --border: #0b1b3a;
+  --muted: #1f2a44;
+  --brand: #0a1670;
+}
+:root[data-theme="dark"][data-contrast="high"] {
+  --border: #ffffff;
+  --muted: #dfe5f5;
+  --brand: #c4cfff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-fg: var(--brand-fg);
+  --color-brand-soft: var(--brand-soft);
+  --color-saffron: var(--saffron);
+  --color-saffron-deep: var(--saffron-deep);
+  --color-saffron-soft: var(--saffron-soft);
+  --color-india-green: var(--india-green);
+  --color-green-soft: var(--green-soft);
+  --color-chakra: var(--chakra);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: var(--font-body), "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: var(--shadow);
+  --shadow-lift: var(--shadow-lg);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, .font-display { font-family: var(--font-display), var(--font-body), ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em; }
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.tricolour-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #ff9933 0 33.33%, #ffffff 33.33% 66.66%, #138808 66.66% 100%);
+}
+:root[data-theme="dark"] .tricolour-bar { background: linear-gradient(90deg, #ff9933 0 33.33%, #e9edf7 33.33% 66.66%, #138808 66.66% 100%); }
+
+.jaali {
+  background-image:
+    radial-gradient(circle at 50% 50%, transparent 0 9px, color-mix(in oklab, var(--brand) 12%, transparent) 9.5px 10.5px, transparent 11px);
+  background-size: 28px 28px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface-3) 37%, var(--surface-2) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}
