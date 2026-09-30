@@ -7,7 +7,7 @@ import type { LevelId } from "@/types";
 
 export interface Stamp { id: string; label: string }
 
-/** The signature AI Passport artwork: a living record with level progression and skill stamps. */
+/** The signature AI Praman artwork: a living record with level progression and skill stamps. */
 export function PassportCover({ name, level, stamps, state, compact }: { name: string; level: LevelId | null; stamps: Stamp[]; state?: string; compact?: boolean }) {
   const li = level ? LEVELS[level].index : -1;
   return (
@@ -18,7 +18,7 @@ export function PassportCover({ name, level, stamps, state, compact }: { name: s
       <div className="relative">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#ffb870]">AI Passport</p>
+            <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#ffb870]">AI Praman</p>
             <p className="mt-0.5 text-xs text-white/70">Learn anywhere. Prove here.</p>
           </div>
           <ChakraMotif size={compact ? 34 : 44} className="text-[#a9b4ff]" />

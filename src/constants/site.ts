@@ -1,7 +1,7 @@
 // All government-identity values are configurable placeholders.
 // Replace ONLY with copy/assets supplied and approved by the authorised Government of India / IndiaAI team.
 export const SITE = {
-  name: "AI Passport",
+  name: "AI Praman",
   tagline: "AI skills badhao. India ko aage badhao.",
   officialDomain: process.env.NEXT_PUBLIC_OFFICIAL_DOMAIN ?? "ai-passport.gov.in", // placeholder — not a claim that the domain exists
   lastUpdated: "29 September 2026",

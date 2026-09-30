@@ -47,7 +47,7 @@ export function Dashboard() {
             <h1 id="hero-h" className="mt-1 font-display text-4xl font-extrabold sm:text-6xl">{t("dash.hero.title", { level: LEVELS[level].name })}</h1>
             {next && <p className="mt-3 max-w-xl text-lg text-white/90">{t("dash.hero.sub", { next: LEVELS[next].name })}</p>}
             <ol className="mt-6 flex max-w-lg items-center gap-1.5" aria-label="Level ladder">{LEVEL_ORDER.map((l) => <li key={l} className="flex-1"><div className={`h-2 rounded-full ${LEVELS[level].index >= LEVELS[l].index ? "bg-white" : "bg-white/30"}`} /><span className="mt-1 block text-[0.68rem] font-semibold text-white/80">{LEVELS[l].short}</span></li>)}</ol>
-            <div className="mt-6 flex flex-wrap gap-3"><Button href="/path" variant="secondary" className="border-0">See my path <ArrowRight size={18} weight="bold" /></Button><Button href="/passport" variant="ghost" className="text-white hover:bg-white/15">Open my Passport</Button></div>
+            <div className="mt-6 flex flex-wrap gap-3"><Button href="/path" variant="secondary" className="border-0">See my path <ArrowRight size={18} weight="bold" /></Button><Button href="/passport" variant="ghost" className="text-white hover:bg-white/15">Open my AI Praman</Button></div>
           </div>
         </motion.section>
       ) : (

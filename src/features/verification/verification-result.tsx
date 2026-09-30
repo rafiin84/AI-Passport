@@ -38,9 +38,9 @@ export function VerificationResult({ id }: { id: string }) {
 
       {e.state === "credential_issued" && (
         <>
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="rounded-[2rem] bg-gradient-to-br from-india-green to-[#0b5a06] p-8 text-center text-white"><p className="text-sm font-bold uppercase tracking-widest text-white/80">Verified</p><h2 className="font-display text-4xl font-extrabold">You proved it.</h2><p className="mt-1 text-white/90">Your credential is issued and added to your AI Passport.</p></motion.div>
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="rounded-[2rem] bg-gradient-to-br from-india-green to-[#0b5a06] p-8 text-center text-white"><p className="text-sm font-bold uppercase tracking-widest text-white/80">Verified</p><h2 className="font-display text-4xl font-extrabold">You proved it.</h2><p className="mt-1 text-white/90">Your credential is issued and added to your AI Praman.</p></motion.div>
           {cred && <CertificatePreview credentialId={cred.id} />}
-          <div className="grid gap-3 sm:grid-cols-2"><Button href="/passport" size="lg" variant="secondary"><Medal size={20} />Open my Passport</Button><Button href="/projects/new" size="lg" variant="saffron"><Rocket size={20} />Build a project with this skill</Button></div>
+          <div className="grid gap-3 sm:grid-cols-2"><Button href="/passport" size="lg" variant="secondary"><Medal size={20} />Open my AI Praman</Button><Button href="/projects/new" size="lg" variant="saffron"><Rocket size={20} />Build a project with this skill</Button></div>
         </>
       )}
 

@@ -90,7 +90,7 @@ export function generateAssessment(course: Course): Assessment {
   const evidence = course.evidenceTypes.length ? course.evidenceTypes : (["screenshot"] as EvidenceType[]);
   return {
     id: `gen-${course.id}`, type: "course", courseId: course.id, title: `Verify: ${course.title}`, questions,
-    scenarios: [{ id: `gen-${course.id}-s1`, prompt: `You've applied what you learned in "${course.title}" and the tool gives an output that looks right but you can't confirm it. What do you do?`, options: ["Use it as-is", "Verify against a trustworthy source or test, then decide", "Delete the work", "Ask a friend to submit it for you"], correctAnswer: 1, explanation: "Verification before use is part of every skill on AI Passport." }],
+    scenarios: [{ id: `gen-${course.id}-s1`, prompt: `You've applied what you learned in "${course.title}" and the tool gives an output that looks right but you can't confirm it. What do you do?`, options: ["Use it as-is", "Verify against a trustworthy source or test, then decide", "Delete the work", "Ask a friend to submit it for you"], correctAnswer: 1, explanation: "Verification before use is part of every skill on AI Praman." }],
     practical: course.buildOutcomes.length || course.hasProject ? {
       brief: course.buildOutcomes[0] ? `Build or demonstrate: ${course.buildOutcomes[0]}.` : `Show a real task where you applied ${course.title}.`, requiredEvidence: evidence,
       rubric: [

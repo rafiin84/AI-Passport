@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { StaticPage } from "@/components/layout/static-page";
 export const metadata: Metadata = { title: "Help" };
-const STEPS = [["Register", "Use the mock Aadhaar flow or continue as the demo learner."], ["Take the AI Challenge", "A friendly adaptive set of questions. About 6–12."], ["Follow your path", "Open a course. You'll be told when you're leaving AI Passport."], ["Come back and verify", "Declare completion, pass a knowledge check and submit evidence."], ["Build and get recognised", "Add a project and submit it to a category."]];
+const STEPS = [["Register", "Use the mock Aadhaar flow or continue as the demo learner."], ["Take the AI Challenge", "A friendly adaptive set of questions. About 6–12."], ["Follow your path", "Open a course. You'll be told when you're leaving AI Praman."], ["Come back and verify", "Declare completion, pass a knowledge check and submit evidence."], ["Build and get recognised", "Add a project and submit it to a category."]];
 export default function Page() {
   return (
     <StaticPage title="Help" eyebrow="Help" summary="Getting started, in five steps.">

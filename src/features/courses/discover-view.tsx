@@ -56,7 +56,7 @@ export function DiscoverView() {
         ) : (
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">{courses?.map((c) => <CourseCard key={c.id} course={c} />)}</div>
         )}
-        <p className="mt-8 text-sm text-muted">Prices, durations and links are curated snapshots and may change on the provider's site. Providers are independent of AI Passport; no partnership is implied.</p>
+        <p className="mt-8 text-sm text-muted">Prices, durations and links are curated snapshots and may change on the provider's site. Providers are independent of AI Praman; no partnership is implied.</p>
       </section>
     </div>
   );

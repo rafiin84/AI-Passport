@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, UserPlus, Target, Compass, BookOpenText, SealCheck, Certificate, Hammer, Medal, ShieldCheck, Wheelchair, Translate, LinkSimple, Quotes } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/card";
-import { PassportCover } from "@/components/passport/passport-cover";
 import { TricolourAccent } from "@/components/government/tricolour";
 import { StateEmblemPlaceholder } from "@/components/government/emblem";
 import { LevelBadge } from "@/components/ui/badge";
@@ -27,6 +26,19 @@ const JOURNEY = [
   { icon: Medal, title: "Get recognised", body: "Project-first national recognition across 15 categories." },
 ];
 
+const HERO_CARDS = [
+  { value: "499", label: "Approved courses", sub: "Across 75 platforms" },
+  { value: "4", label: "Awarding bodies", sub: "Accredited to certify" },
+  { value: "5", label: "Learner cohorts", sub: "User to Innovator" },
+  { value: "10", label: "Languages", sub: "Course-level availability" },
+];
+const BAND = [
+  { value: "28.1 L", label: "Learners registered", sub: "Live", tone: "text-fg" },
+  { value: "10.8 L", label: "Course completions", sub: "Reported by providers", tone: "text-brand" },
+  { value: "9.1 L", label: "Certificates issued", sub: "Competency verified", tone: "text-brand" },
+  { value: "27.4%", label: "Women's participation", sub: "Mission goal 30%", tone: "text-saffron-deep" },
+];
+
 const fade = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } };
 
 export function LandingPage() {
@@ -35,28 +47,49 @@ export function LandingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="jaali absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="absolute -right-24 -top-24 size-[32rem] rounded-full bg-saffron/20 blur-3xl" aria-hidden="true" />
-        <div className="absolute -bottom-32 -left-24 size-[28rem] rounded-full bg-india-green/15 blur-3xl" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-[1.15fr_0.85fr]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0b1b3a] via-[#10285c] to-[#1a2b8f] text-white">
+        <div className="jaali absolute inset-0 opacity-30" aria-hidden="true" />
+        <div className="absolute -right-24 -top-24 size-[32rem] rounded-full bg-saffron/15 blur-3xl" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-28 pt-14 sm:px-6 md:pb-32 md:pt-20 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
-            <motion.p variants={fade} initial="hidden" animate="show" className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-semibold text-fg shadow-card">
+            <motion.p variants={fade} initial="hidden" animate="show" className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-sm font-semibold text-white">
               <span className="size-2 rounded-full bg-saffron" aria-hidden="true" />{t("hero.eyebrow")}
             </motion.p>
-            <motion.h1 variants={fade} initial="hidden" animate="show" transition={{ delay: 0.05 }} className="font-display text-[2.6rem] font-extrabold leading-[1.02] text-fg sm:text-6xl lg:text-7xl">
+            <motion.h1 variants={fade} initial="hidden" animate="show" transition={{ delay: 0.05 }} className="font-display text-[2.6rem] font-extrabold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
               {t("hero.title")}
             </motion.h1>
-            <motion.p variants={fade} initial="hidden" animate="show" transition={{ delay: 0.12 }} className="mt-5 max-w-xl text-lg text-muted sm:text-xl">{t("hero.sub")}</motion.p>
+            <motion.p variants={fade} initial="hidden" animate="show" transition={{ delay: 0.12 }} className="mt-5 max-w-xl text-lg text-white/80 sm:text-xl">{t("hero.sub")}</motion.p>
             <motion.div variants={fade} initial="hidden" animate="show" transition={{ delay: 0.2 }} className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="/register" size="lg" variant="saffron">{t("hero.cta1")} <ArrowRight size={20} weight="bold" /></Button>
-              <Button href="/discover" size="lg" variant="secondary">{t("hero.cta2")}</Button>
+              <Button href="/discover" size="lg" variant="secondary" className="border-white/30 bg-white/10 text-white hover:bg-white/20">{t("hero.cta2")}</Button>
             </motion.div>
-            <motion.p variants={fade} initial="hidden" animate="show" transition={{ delay: 0.28 }} className="mt-8 font-display text-xl font-bold text-brand">{SITE.tagline}</motion.p>
+            <motion.p variants={fade} initial="hidden" animate="show" transition={{ delay: 0.28 }} className="mt-8 font-display text-xl font-bold text-[#ffb870]">{SITE.tagline}</motion.p>
           </div>
-          <div className="flex justify-center lg:justify-end"><PassportCover name="Aarav Mehta" state="Karnataka" level="builder" stamps={[{ id: "1", label: "Generative AI" }, { id: "2", label: "Prompting" }, { id: "3", label: "AI SDLC" }]} /></div>
+          <dl className="grid grid-cols-2 gap-4" aria-label="Catalogue at a glance">
+            {HERO_CARDS.map((c, i) => (
+              <motion.div key={c.label} variants={fade} initial="hidden" animate="show" transition={{ delay: 0.15 + i * 0.07 }} className="flex flex-col rounded-3xl border border-white/15 bg-white/10 p-5 text-white shadow-lift backdrop-blur sm:p-6">
+                <dt className="order-2 mt-2 font-semibold">{c.label}</dt>
+                <dd className="order-1 font-display text-4xl font-extrabold tabular-nums sm:text-5xl">{c.value}</dd>
+                <dd className="order-3 mt-1 text-sm text-white/70">{c.sub}</dd>
+              </motion.div>
+            ))}
+          </dl>
         </div>
-        <TricolourAccent />
+        <TricolourAccent className="absolute inset-x-0 bottom-0" />
+      </section>
+
+      {/* Stats band */}
+      <section aria-label="Programme statistics" className="relative z-10 mx-auto -mt-16 max-w-7xl px-4 sm:px-6">
+        <dl className="grid grid-cols-2 overflow-hidden rounded-3xl border border-line bg-surface shadow-lift md:grid-cols-4 md:divide-x md:divide-line">
+          {BAND.map((b) => (
+            <div key={b.label} className="flex flex-col border-b border-line p-5 sm:p-7 md:border-b-0">
+              <dt className="order-2 mt-1 font-medium text-fg">{b.label}</dt>
+              <dd className={`order-1 font-display text-3xl font-extrabold tabular-nums sm:text-4xl ${b.tone}`}>{b.value}</dd>
+              <dd className="order-3 text-sm text-muted">{b.sub}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-2 text-center text-xs text-muted">Sample figures for demonstration.</p>
       </section>
 
       {/* National mission / PM section — awaiting approved assets */}
@@ -117,7 +150,7 @@ export function LandingPage() {
       <section aria-labelledby="feat-h" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
-            <SectionHeading eyebrow="Learn anywhere. Prove here." title="Take a course anywhere. Show us what you learned." sub="AI Passport points you to trusted courses on other platforms. When you finish, you come back, take a short verification and submit evidence. That's what turns learning into a credential." />
+            <SectionHeading eyebrow="Learn anywhere. Prove here." title="Take a course anywhere. Show us what you learned." sub="AI Praman points you to trusted courses on other platforms. When you finish, you come back, take a short verification and submit evidence. That's what turns learning into a credential." />
             <ul className="mt-6 space-y-3 text-fg">
               {["We don't host or control the course. Every external link is clearly marked.", "Course completion alone isn't enough — you prove it with a quiz and real work.", "AI drafts assessments; a human reviews them before they count."].map((x) => (
                 <li key={x} className="flex gap-3"><ShieldCheck size={22} weight="duotone" className="mt-0.5 shrink-0 text-india-green" aria-hidden="true" /><span>{x}</span></li>
@@ -151,7 +184,7 @@ export function LandingPage() {
           {[
             { i: Wheelchair, t: "Accessible by design", b: "Keyboard navigation, screen-reader labels, adjustable text size, high contrast and reduced motion." },
             { i: Translate, t: "Built for many languages", b: "English and Hindi today, with a structure ready for more Indian languages." },
-            { i: LinkSimple, t: "Clear about external sites", b: "We always tell you when you're leaving AI Passport and who runs the site you're going to." },
+            { i: LinkSimple, t: "Clear about external sites", b: "We always tell you when you're leaving AI Praman and who runs the site you're going to." },
           ].map((c) => (
             <div key={c.t} className="rounded-3xl border border-line bg-surface p-6 shadow-card"><c.i size={30} weight="duotone" className="text-brand" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-bold">{c.t}</h3><p className="mt-1 text-muted">{c.b}</p></div>
           ))}

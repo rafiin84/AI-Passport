@@ -57,7 +57,7 @@ export function RegisterFlow() {
         <AnimatePresence mode="wait">
           {step === "welcome" && (
             <motion.div key="welcome" {...slide} className="space-y-5">
-              <h1 ref={headingRef} tabIndex={-1} className="font-display text-3xl font-extrabold outline-none">Welcome. Let's set up your AI Passport.</h1>
+              <h1 ref={headingRef} tabIndex={-1} className="font-display text-3xl font-extrabold outline-none">Welcome. Let's set up your AI Praman.</h1>
               <p className="text-muted">It takes about two minutes. You'll register with Aadhaar (mock), tell us a bit about yourself, and then take a friendly challenge to find your AI level.</p>
               <MockNotice />
               <Button block size="lg" onClick={() => setStep("aadhaar")}><IdentificationBadge size={22} /> Register with Aadhaar (mock)</Button>
@@ -116,8 +116,8 @@ function ConsentStep({ headingRef }: HeadRef) {
   const { setStep, masked } = useRegister();
   const [checks, setChecks] = useState([false, false]);
   const items = [
-    "I agree to share my name, age and location with AI Passport to personalise my learning and to check youth-programme eligibility.",
-    "I understand AI Passport stores only a masked Aadhaar reference (last 4 digits) and that this prototype does not connect to any identity service.",
+    "I agree to share my name, age and location with AI Praman to personalise my learning and to check youth-programme eligibility.",
+    "I understand AI Praman stores only a masked Aadhaar reference (last 4 digits) and that this prototype does not connect to any identity service.",
   ];
   return (
     <div className="space-y-5">

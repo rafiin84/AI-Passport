@@ -16,7 +16,7 @@ export function VerifyCredential({ id }: { id: string }) {
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-16">
       <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Credential verification</h1>
-      <p className="mt-2 text-muted">Check that an AI Passport credential is genuine and current.</p>
+      <p className="mt-2 text-muted">Check that an AI Praman credential is genuine and current.</p>
       <div className="mt-8">
         {isLoading ? <LoadingBlock label="Checking credential" /> : error || !data ? (
           <div role="alert" className="rounded-3xl border border-danger bg-danger-soft p-6"><WarningOctagon size={36} weight="fill" className="text-danger" aria-hidden="true" /><h2 className="mt-2 font-display text-2xl font-bold">We couldn't find this credential</h2><p className="mt-1 text-muted">Check the ID and try again. {errorMessage(error)}</p><p className="mt-3 font-mono text-sm">Searched: {id}</p></div>

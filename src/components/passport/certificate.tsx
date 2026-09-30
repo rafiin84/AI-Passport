@@ -29,7 +29,7 @@ export function CertificatePreview({ credentialId, showActions = true }: { crede
         <div className="relative">
           <header className="flex flex-wrap items-center justify-between gap-4 border-b border-[#0b1b3a]/15 pb-5">
             <div className="flex items-center gap-3"><StateEmblemPlaceholder size={52} /><div><p lang="hi" className="font-bold">भारत सरकार</p><p className="text-sm font-medium">Government of India</p></div></div>
-            <div className="flex items-center gap-2 text-right"><div><p className="font-display text-lg font-extrabold">AI Passport</p><p className="text-xs text-[#4b5877]">{SITE.tagline}</p></div><ChakraMotif size={36} className="text-[#06038d]" /></div>
+            <div className="flex items-center gap-2 text-right"><div><p className="font-display text-lg font-extrabold">AI Praman</p><p className="text-xs text-[#4b5877]">{SITE.tagline}</p></div><ChakraMotif size={36} className="text-[#06038d]" /></div>
           </header>
           <div className="py-8 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#b85c00]">Certificate of verified skill</p>

@@ -1,4 +1,4 @@
-# AI Passport — Phase 1 frontend
+# AI Praman — Phase 1 frontend
 
 Next.js 15 · React 19 · TypeScript · Tailwind v4 · Framer Motion · Phosphor · Zustand · TanStack Query · React Hook Form · Zod.
 

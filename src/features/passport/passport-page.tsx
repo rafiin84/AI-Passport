@@ -18,7 +18,7 @@ import { useT } from "@/hooks/use-t";
 export function PassportPage() {
   const t = useT();
   const { data: p, isLoading, error, refetch } = usePassport();
-  if (isLoading) return <LoadingBlock label="Opening your Passport" />;
+  if (isLoading) return <LoadingBlock label="Opening your AI Praman" />;
   if (error || !p) return <ErrorState body={errorMessage(error)} onRetry={() => refetch()} />;
   const stamps = p.verifiedSkills.map((v) => ({ id: v.credentialId, label: v.skill.name }));
   const share = async () => {
@@ -30,7 +30,7 @@ export function PassportPage() {
       <section className="grid items-center gap-8 lg:grid-cols-[28rem_1fr]">
         <PassportCover name={p.user.name} state={`${p.user.city}, ${p.user.state}`} level={p.level} stamps={stamps} />
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-saffron-deep">Your AI Passport</p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-saffron-deep">Your AI Praman</p>
           <h1 className="mt-1 font-display text-4xl font-extrabold sm:text-5xl">A living record of what you can do.</h1>
           <p className="mt-3 max-w-lg text-muted">Every stamp here was proved, not just claimed. Add courses, evidence and projects to grow it.</p>
           <div className="mt-5 flex flex-wrap gap-2"><Button onClick={share} variant="secondary"><ShareNetwork size={18} />Share my profile</Button><Button variant="ghost" href={`/profile/${p.user.id}`}>Preview public profile</Button></div>

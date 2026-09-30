@@ -22,7 +22,7 @@ export function GovernmentFooter() {
                 <p className="text-sm font-medium text-muted">Government of India</p>
               </div>
             </div>
-            <p className="mt-4 font-display text-xl font-bold text-fg">AI Passport</p>
+            <p className="mt-4 font-display text-xl font-bold text-fg">AI Praman</p>
             <p className="text-sm text-muted">{SITE.tagline}</p>
             <div className="mt-4"><IndiaAIHeader /></div>
           </div>
@@ -46,7 +46,7 @@ export function GovernmentFooter() {
           <div className="space-y-1 md:text-right">
             <p><span className="font-medium">Last updated:</span> <time dateTime="2026-09-29">{SITE.lastUpdated}</time></p>
             <p>Domain (placeholder): <span className="font-mono text-xs">{SITE.officialDomain}</span></p>
-            <p>External sites are not controlled by AI Passport. See our <Link className="underline" href="/policies/hyperlinking">hyperlinking policy</Link>.</p>
+            <p>External sites are not controlled by AI Praman. See our <Link className="underline" href="/policies/hyperlinking">hyperlinking policy</Link>.</p>
             <p className="text-xs">This prototype makes no claim of official certification or compliance. Sample data is used for demonstration.</p>
           </div>
         </div>

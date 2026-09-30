@@ -78,7 +78,7 @@ const seeds: Seed[] = [
     prereq: ["Basic web development familiarity", "Comfort using a terminal"],
     sections: [["Product discovery with AI", 6], ["Designing user journeys and the AI SDLC", 7], ["Claude Code fundamentals", 8], ["MCP: connecting tools and data", 6], ["Building the frontend in React", 9], ["Backend, OAuth and Zoho Cloud", 8], ["Testing and reviewing AI-written code", 6], ["Ship it: deployment and demo", 4]],
     outcomes: ["Run a product from discovery to release with an AI-assisted SDLC", "Direct Claude Code to plan, build and test software", "Connect tools and data with MCP", "Separate frontend from backend responsibilities", "Add OAuth and deploy on Zoho Cloud", "Review and test AI-generated code before it ships"],
-    builds: ["A small AI-assisted web application built end to end", "A React frontend with a Zoho Cloud backend and OAuth sign-in", "A demo you can show in your AI Passport"],
+    builds: ["A small AI-assisted web application built end to end", "A React frontend with a Zoho Cloud backend and OAuth sign-in", "A demo you can show in your AI Praman"],
     description: "Learn a repeatable methodology for building real software with AI: discover the problem, design journeys, direct Claude Code, connect tools with MCP, build a React frontend, add OAuth and deploy on Zoho Cloud.",
     verification: "mixed", evidence: ["url", "repository", "demo", "screenshot"], assessment: "va-ai-sdlc" },
   { id: "c-genai-essentials", provider: "coursera", title: "Generative AI Essentials", instructor: "Curated provider faculty", level: "builder", skills: ["generative-ai", "prompting", "ai-productivity"], categories: ["Generative AI"], hours: 10, price: 0, priceType: "free_audit", format: "Video", project: true, theme: "violet",

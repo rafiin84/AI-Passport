@@ -4,9 +4,9 @@ import { StaticPage } from "@/components/layout/static-page";
 import { CATEGORIES } from "@/mocks/recognition";
 export const metadata: Metadata = { title: "Sitemap" };
 const GROUPS: [string, [string, string][]][] = [
-  ["About", [["Home", "/"], ["About AI Passport", "/about"], ["Mission", "/mission"], ["FAQ", "/faq"], ["Help", "/help"]]],
+  ["About", [["Home", "/"], ["About AI Praman", "/about"], ["Mission", "/mission"], ["FAQ", "/faq"], ["Help", "/help"]]],
   ["Get started", [["Register", "/register"], ["AI Challenge", "/assessment"], ["Discover courses", "/discover"]]],
-  ["Learners", [["Dashboard", "/dashboard"], ["My learning", "/learning"], ["AI Passport", "/passport"], ["Badges", "/badges"], ["Projects", "/projects"], ["Notifications", "/notifications"], ["Settings", "/settings"]]],
+  ["Learners", [["Dashboard", "/dashboard"], ["My learning", "/learning"], ["AI Praman", "/passport"], ["Badges", "/badges"], ["Projects", "/projects"], ["Notifications", "/notifications"], ["Settings", "/settings"]]],
   ["Recognition", [["Top 100 categories", "/recognition"], ...CATEGORIES.map((c): [string, string] => [c.name, `/recognition/${c.id}`])]],
   ["Policies and contact", [["Contact us", "/contact"], ["Feedback", "/feedback"], ["Accessibility", "/accessibility"], ["Privacy Policy", "/policies/privacy"], ["Terms & Conditions", "/policies/terms"], ["Copyright Policy", "/policies/copyright"], ["Hyperlinking Policy", "/policies/hyperlinking"], ["Grievance", "/policies/grievance"]]],
 ];

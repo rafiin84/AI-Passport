@@ -1,6 +1,6 @@
 {
-  "name": "AI Passport",
-  "short_name": "AI Passport",
+  "name": "AI Praman",
+  "short_name": "AI Praman",
   "description": "AI skills badhao. India ko aage badhao.",
   "start_url": "/dashboard",
   "display": "standalone",

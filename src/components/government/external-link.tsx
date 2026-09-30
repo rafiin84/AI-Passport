@@ -16,7 +16,7 @@ export function ExternalLinkGate({ href, providerName, onProceed, children, vari
       <Button variant={variant} size={size} block={block} className={className} onClick={() => setOpen(true)}>{children}<ArrowSquareOut size={18} aria-hidden="true" /></Button>
       <Modal open={open} onOpenChange={setOpen} title={t("leave.title")} description={t("leave.body", { provider: providerName })}>
         <div className="rounded-2xl bg-surface-2 p-3 text-sm text-muted">
-          You'll open <span className="break-all font-mono text-xs text-fg">{href}</span> in a new tab. Come back to AI Passport when you finish — then declare your course complete and show us what you learned.
+          You'll open <span className="break-all font-mono text-xs text-fg">{href}</span> in a new tab. Come back to AI Praman when you finish — then declare your course complete and show us what you learned.
         </div>
         <div className="mt-5 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
           <Button variant="secondary" onClick={() => setOpen(false)}>{t("leave.stay")}</Button>

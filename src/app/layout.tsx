@@ -8,7 +8,7 @@ const body = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-body", di
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "AI Passport — AI skills badhao. India ko aage badhao.", template: "%s · AI Passport" },
+  title: { default: "AI Praman — AI skills badhao. India ko aage badhao.", template: "%s · AI Praman" },
   description: "Find your AI level, learn the skills that matter, prove what you know and show India what you built.",
   manifest: "/manifest.webmanifest",
   icons: { icon: "/icons/icon.svg", apple: "/icons/icon.svg" },
